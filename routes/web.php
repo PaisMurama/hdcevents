@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ContactController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,28 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/',[EventController::class,'index']);
 Route::get('/events/create',[EventController::class,'create']);
-
-
-Route::get('/contact', [ContactController::class,'contact']);
-
-
-
-/*
-Route::get('/produtos/{id}', function ($id) {
-    return view('product',['id'=>$id]);
-
-
-});*/
-
-
-
-Route::get('/produtos',[ProductController::class,'productQuery']
-);
-
-
-Route::get('/produtos_teste/{id?}', [ProductController::class,'product']);
-
+//Route::get('/contact', [ContactController::class,'contact']);
